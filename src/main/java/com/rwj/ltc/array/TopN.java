@@ -16,6 +16,11 @@ public class TopN {
 //
 //    }
 
+    /**
+     * 插入排序写法二
+     * @param nums
+     * @return
+     */
     public static int[] o_2_2(int[] nums) {
         int preIndex;
         int currentEle;
@@ -30,6 +35,11 @@ public class TopN {
         return nums;
     }
 
+    /**
+     * 插入排序写法一
+     * @param nums
+     * @return
+     */
     public static int[] o_2(int[] nums) {
         int preIndex;
         int currentEle;
@@ -61,20 +71,42 @@ public class TopN {
                     maxIndex = j;
                 }
             }
-            ArrayUtils.swap(nums, i, maxIndex);
+            if(maxIndex != i) ArrayUtils.swap(nums, i, maxIndex);
         }
         return nums[k-1];
     }
 
-
-
     /**
-     * 暴力破解,冒泡排序
+     * 冒泡排序优化：给定一个flag如果第一轮就没有交换操作的话，说明已经有序了，直接退出
      * @param nums
      * @param k
      * @return
      */
-    public int m_1(int nums[], int k) {
+    public int m_2(int[] nums, int k) {
+        int flag = 0;
+        for(int i = 0; i < nums.length; i++) {
+            for(int j = i; j< nums.length; j++) {
+                ArrayUtils.swap(nums, i, j);
+                System.out.println("i="+i+"\tj="+j+"\tnums:"+ Arrays.toString(nums));
+                flag = 1;
+            }
+            if(flag == 0) {
+                break;
+            }
+            if(i == k) {
+                break;
+            }
+        }
+        return nums[k-1];
+    }
+
+    /**
+     * 冒泡排序
+     * @param nums
+     * @param k
+     * @return
+     */
+    public int m_1(int[] nums, int k) {
         for(int i = 0; i < nums.length; i++) {
             for(int j = i; j< nums.length; j++) {
                 ArrayUtils.swap(nums, i, j);
@@ -87,7 +119,7 @@ public class TopN {
         return nums[k-1];
     }
 
-    public int m_2(int[] nums, int k) {
+    public int m_3(int[] nums, int k) {
         Arrays.sort(nums);
         return nums[nums.length-k];
     }
