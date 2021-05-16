@@ -13,13 +13,15 @@ import java.util.Arrays;
 @Slf4j
 public class Test {
     private static int tmp;
-    private static int[] nums = {3, 2, 1, 0, 1, 3, 2,  5, 4, 6};
+//    private static int[] nums = {3, 2, 1, 0, 1, 3, 2,  5, 4, 6};
+    private static int[] nums = {3, 2, 1, 5, 6, 4};
 
     public static void main(String[] args) {
 //        System.out.println(Math.floor(5.8));
 //        System.out.println(Math.floor(5.1));
 //        System.out.println(Arrays.toString(TopN.o_2(nums)));
-        t1();
+        System.out.println(Arrays.toString(TopN.o_3(nums)));
+        System.out.println(nums[nums.length-2]);
     }
 
 

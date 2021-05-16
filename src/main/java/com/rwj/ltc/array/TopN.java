@@ -11,10 +11,27 @@ import java.util.Arrays;
  */
 public class TopN {
 
-
-//    public static int[] o_3() {
-//
-//    }
+    /**
+     * 希尔排序，插入排序的改进版；1959年Shell发明，第一个突破O(n^2)的排序算法；
+     * 又叫缩小增量排序。
+     * @param nums
+     * @return
+     */
+    public static int[] o_3(int[] nums) {
+        int gap;
+        for(gap = (int)Math.floor(nums.length / 2); gap > 0; gap = (int)Math.floor(gap / 2)) {
+            for(int i = gap; i < nums.length; i++) {
+                int j = i;
+                int current = nums[i];
+                while(j-gap > 0 && current < nums[j-gap]) {
+                    nums[j] = nums[j-gap];
+                    j = j - gap;
+                }
+                nums[j] = current;
+            }
+        }
+        return nums;
+    }
 
     /**
      * 插入排序写法二
