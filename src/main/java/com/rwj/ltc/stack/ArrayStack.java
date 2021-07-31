@@ -3,7 +3,8 @@ package com.rwj.ltc.stack;
 /**
  * @author rwj
  * @create_time 2021/7/31
- * @description
+ * @description 基于数组实现的顺序栈
+ *      栈：先进后出
  */
 public class ArrayStack {
     private String[] items;
