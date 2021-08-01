@@ -77,14 +77,14 @@ public class Test {
 
         //TODO: 数组实现的循环队列测试
 //        CircularQueue circularQueue = new CircularQueue(5);
-        CircularQueue2 circularQueue = new CircularQueue2(5);
+        /*CircularQueue2 circularQueue = new CircularQueue2(5);
         System.out.println(circularQueue.enqueue("1"));
         System.out.println(circularQueue.enqueue("2"));
-        System.out.println(circularQueue.enqueue("3"));
+        System.out.println(circularQueue.enqueue("3"));*/
 //        System.out.println(circularQueue.enqueue("4"));
 //        System.out.println(circularQueue.enqueue("5"));
 //        System.out.println(circularQueue.enqueue("6"));
-        circularQueue.iterator();
+        /*circularQueue.iterator();*/
        /* System.out.println(circularQueue.dequeue()+"---");
         System.out.println(circularQueue.dequeue()+"---");
         System.out.println(circularQueue.dequeue()+"---");
@@ -96,6 +96,39 @@ public class Test {
         System.out.println(circularQueue.dequeue()+"---");
         System.out.println(circularQueue.dequeue()+"---");*/
 
+       //TODO: 链表实现的循环队列测试
+        CircularLinkedQueue circularLinkedQueue = new CircularLinkedQueue(5);
+        System.out.println(circularLinkedQueue.enqueue("1"));
+        System.out.println(circularLinkedQueue.enqueue("2"));
+        System.out.println(circularLinkedQueue.enqueue("3"));
+        System.out.println(circularLinkedQueue.enqueue("4"));
+        System.out.println(circularLinkedQueue.enqueue("5"));
+        System.out.println(circularLinkedQueue.enqueue("6"));
+        System.out.println("-------------------------------------");
+        circularLinkedQueue.iterator();
+        System.out.println(circularLinkedQueue.dequeue());
+        System.out.println(circularLinkedQueue.dequeue());
+        System.out.println(circularLinkedQueue.dequeue());
+        System.out.println("-------------------------------------");
+        circularLinkedQueue.iterator();
+        System.out.println(circularLinkedQueue.enqueue("7"));
+        System.out.println(circularLinkedQueue.enqueue("8"));
+        System.out.println(circularLinkedQueue.enqueue("9"));
+        System.out.println(circularLinkedQueue.enqueue("10"));
+        circularLinkedQueue.iterator();
+        System.out.println("-------------------------------------");
+        System.out.println(circularLinkedQueue.dequeue());
+        System.out.println(circularLinkedQueue.dequeue());
+        System.out.println(circularLinkedQueue.enqueue("a"));
+        System.out.println(circularLinkedQueue.enqueue("b"));
+        System.out.println(circularLinkedQueue.enqueue("c"));
+        System.out.println(circularLinkedQueue.dequeue());
+        System.out.println(circularLinkedQueue.dequeue());
+        System.out.println(circularLinkedQueue.dequeue());
+        System.out.println(circularLinkedQueue.dequeue());
+        System.out.println(circularLinkedQueue.dequeue());
+        System.out.println(circularLinkedQueue.dequeue());
+        System.out.println(circularLinkedQueue.dequeue());
 
     }
 }
