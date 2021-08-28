@@ -5,10 +5,10 @@ package com.rwj.ltc.list;
  * @create_time 2021/7/30
  * @description 链表节点
  */
-public class ListNode {
-    Object val;
+public class ListNode<T> {
+    T val;
     ListNode next;
-    ListNode(Object val) {
+    ListNode(T val) {
         this.val = val;
     }
 

@@ -21,7 +21,7 @@ public class Test {
         node5.next = node2;
 
         ListNode head = node1;
-        System.out.println(hasCycle(head) + "<--->" + hasCycle2(head));
+//        System.out.println(hasCycle(head) + "<--->" + hasCycle2(head));
 //        iterateList(head);
 
 //        reverseList(head);
@@ -31,33 +31,36 @@ public class Test {
         ListNode a = new ListNode("a");
         ListNode b = new ListNode("b");
         ListNode c = new ListNode("c");
-        ListNode C = new ListNode("c");
+        ListNode d = new ListNode("d");
         ListNode B = new ListNode("ba");
         ListNode A = new ListNode("a");
         a.next = b;
         b.next = c;
-        c.next = C;
-        C.next = B;
+        c.next = d;
+        d.next = B;
 //        c.next = B;
         B.next = A;
-        iterateList(a);
+//        iterateList(a);
 //        System.out.println(isPalindrome(a));
-        System.out.println(hasCycle(a) + "<--->" + hasCycle2(a));
+//        System.out.println(hasCycle(a) + "<--->" + hasCycle2(a));
 
         ListNode j = new ListNode("a");
         ListNode k = new ListNode("a");
         ListNode l = new ListNode("a");
         j.next = k;
         k.next = l;
-        System.out.println(hasCycle(j) + "<--->" + hasCycle2(j));
+//        System.out.println(hasCycle(j) + "<--->" + hasCycle2(j));
 
 
 //        System.out.println(Arrays.toString(getMiddleNode(head)));     //TODO: 环状链表会陷入死循环
         System.out.println(Arrays.toString(getMiddleNode(a)));
         System.out.println(Arrays.toString(getMiddleNode(j)));
 
-        head = removeN(a, 2);
-        iterateList(head);
+        System.out.println(Arrays.toString(getMidNode(a)));
+        System.out.println(Arrays.toString(getMidNode(j)));
+
+//        head = removeN(a, 2);
+//        iterateList(head);
     }
 
     /**
@@ -80,6 +83,26 @@ public class Test {
 
         return head;
     }
+
+    /**
+     * 求链表的中间节点： 2021-08-29第一次复习新的想法
+     */
+    private static ListNode[] getMidNode(ListNode head) {
+        ListNode[] res = new ListNode[2];
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast.next != null) {
+            fast = fast.next.next;
+            if(fast == null) {
+                break;
+            }
+            slow = slow.next;
+        }
+        res[0] = slow;
+        if(fast == null) res[1] = slow.next;
+        return res;
+    }
+
 
 
 
@@ -157,7 +180,7 @@ public class Test {
      *
      * @param head
      */
-    private static void iterateList(ListNode head) {
+    public static void iterateList(ListNode head) {
         while (head != null) {
             System.out.print(head.val + "\t");
             head = head.next;
