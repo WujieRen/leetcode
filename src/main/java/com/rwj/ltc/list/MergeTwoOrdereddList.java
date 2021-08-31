@@ -25,6 +25,10 @@ public class MergeTwoOrdereddList {
 
     /**
      * 自己实现的方式①
+     *  我这种写法和别人的写法完全是两种思想
+     *      我每次比较的时相同位置的元素；
+     *      每比较一次，比较的两个元素已经连好了，同时更新pre(即已经连好的节点的tail)
+     *      下次比较时，把两者连好，同时把上次pre.next指向小的节点；在更新下pre
      *
      * @param n1
      * @param n2
@@ -60,7 +64,9 @@ public class MergeTwoOrdereddList {
 
     /**
      * 别人的代码
-     *
+     *  别人的代码相当于是比较的不同位置的元素；
+     *  谁小；就更新谁去指向.next；然后用.next和另一个链表的当前节点比较
+     *  每次结果放在pre.next；同时更新pre指向pre.next
      * @param n1
      * @param n2
      * @return

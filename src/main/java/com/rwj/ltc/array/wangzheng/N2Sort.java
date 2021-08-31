@@ -17,6 +17,7 @@ public class N2Sort {
         System.out.println(Arrays.toString(insertSort(arry)));
 //        System.out.println(Arrays.toString(selectionSort(arry)));
 //        System.out.println(Arrays.toString(selectInsert(arry)));
+
     }
 
     private static int[] selectInsert(int[] arry) {
@@ -63,6 +64,8 @@ public class N2Sort {
                     int tmp = arry[j-1];
                     arry[j-1] = arry[j];
                     arry[j] = tmp;
+                } else {
+                    break;
                 }
             }
         }
