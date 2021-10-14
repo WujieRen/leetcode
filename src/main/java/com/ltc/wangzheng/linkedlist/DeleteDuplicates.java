@@ -1,5 +1,7 @@
 package com.ltc.wangzheng.linkedlist;
 
+import com.ltc.wangzheng.ListNode;
+
 public class DeleteDuplicates {
     public static void main(String[] args) {
         ListNode h4 = new ListNode(3);

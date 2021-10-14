@@ -1,5 +1,7 @@
 package com.ltc.wangzheng.linkedlist;
 
+import com.ltc.wangzheng.ListNode;
+
 public class AddTwoNumbers2 {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(0);

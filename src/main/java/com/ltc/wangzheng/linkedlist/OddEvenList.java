@@ -1,5 +1,7 @@
 package com.ltc.wangzheng.linkedlist;
 
+import com.ltc.wangzheng.ListNode;
+
 public class OddEvenList {
     public static void main(String[] args) {
 //        ListNode h5 = new ListNode(5);

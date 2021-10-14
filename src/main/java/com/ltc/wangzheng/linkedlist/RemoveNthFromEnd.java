@@ -1,5 +1,7 @@
 package com.ltc.wangzheng.linkedlist;
 
+import com.ltc.wangzheng.ListNode;
+
 public class RemoveNthFromEnd {
     public static void main(String[] args) {
 

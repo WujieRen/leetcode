@@ -1,5 +1,7 @@
 package com.ltc.wangzheng.linkedlist;
 
+import com.ltc.wangzheng.ListNode;
+
 public class ReverseKGroup {
     public static void main(String[] args) {
         ListNode l5 = new ListNode(5);
