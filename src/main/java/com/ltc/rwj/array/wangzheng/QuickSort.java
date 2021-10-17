@@ -9,7 +9,8 @@ import java.util.Arrays;
  */
 public class QuickSort {
 
-    private static int[] arry = {0, 5, 1, 9, 6, 7, 19, 11, 3, 8, 4};
+//    private static int[] arry = {0, 5, 1, 9, 6, 7, 19, 11, 3, 8, 4};
+    private static int[] arry = {6, 2, 2, 4, 3, 1};
 
     public static void main(String[] args) {
         quickSort(arry, 0, arry.length - 1);
