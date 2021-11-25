@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * @author rwj
  * @create_time 2021/11/24
- * @description
+ * @description 二叉树前序遍历，非递归
  */
 public class PreorderTraversal {
 

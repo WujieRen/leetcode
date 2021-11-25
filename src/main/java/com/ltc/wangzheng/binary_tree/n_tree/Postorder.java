@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * @author rwj
  * @create_time 2021/11/24
- * @description
+ * @description n叉树后序遍历
  */
 public class Postorder {
     public List<Integer> postorder(Node root) {

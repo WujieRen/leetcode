@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @author rwj
  * @create_time 2021/11/24
- * @description
+ * @description n叉树前序遍历
  */
 public class Preorder {
     public List<Integer> preorder(Node root) {

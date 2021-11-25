@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author rwj
  * @create_time 2021/11/15
- * @description
+ * @description 二叉树前序遍历，非递归
  */
 public class PreorderTraversalRecursion {
     public List<Integer> preorderTraversal(TreeNode root) {
