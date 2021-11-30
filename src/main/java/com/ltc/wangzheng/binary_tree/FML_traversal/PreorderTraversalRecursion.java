@@ -1,6 +1,6 @@
-package com.ltc.wangzheng.binary_tree;
+package com.ltc.wangzheng.binary_tree.FML_traversal;
 
-import lombok.val;
+import com.ltc.wangzheng.binary_tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.List;

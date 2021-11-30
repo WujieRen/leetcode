@@ -1,4 +1,6 @@
-package com.ltc.wangzheng.binary_tree;
+package com.ltc.wangzheng.binary_tree.FML_traversal;
+
+import com.ltc.wangzheng.binary_tree.TreeNode;
 
 import java.util.*;
 
@@ -13,8 +15,9 @@ public class PreorderTraversal {
 //        TreeNode n1 = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
         TreeNode n1 = new TreeNode(1, new TreeNode(2, new TreeNode(4, null, new TreeNode(6, new TreeNode(7), new TreeNode(8))), new TreeNode(5)), new TreeNode(3));
 //        System.out.println(preorderTraversal(n1));
-        System.out.println(o3(n1));
+        System.out.println(o1(n1));
         System.out.println(o2(n1));
+        System.out.println(o3(n1));
     }
 
     public static List<Integer> o1(TreeNode root) {
