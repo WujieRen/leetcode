@@ -19,10 +19,26 @@ import java.util.Stack;
 public class FindBottomLeftValue {
 
     public static void main(String[] args) {
-        TreeNode n1 = new TreeNode(1, new TreeNode(2, new TreeNode(4), null), new TreeNode(3, new TreeNode(5), new TreeNode(6, new TreeNode(7), null)));
+        TreeNode n1 = new TreeNode(1, new TreeNode(2, new TreeNode(4), null), new TreeNode(3, new TreeNode(5), new TreeNode(6, null, new TreeNode(7))));
 //        System.out.println(findBottomLeftValue(n1));
+        System.out.println(o_m1(n1));
         System.out.println(m2(n1));
         System.out.println(o3(n1));
+    }
+
+    static int res,maxDepth;
+    public static int o_m2(TreeNode root) {
+        iteral(root, 0);
+        return res;
+    }
+    public static void iteral(TreeNode node, int depth) {
+        if(node == null) return ;
+        if(depth > maxDepth) {
+            maxDepth = depth;
+            res = node.val;
+        } //TODO: 以上部分的代码是可以优化的；只有当节点左右节点都是null的时候才执行比较和复制的操作
+        iteral(node.left, depth+1);
+        iteral(node.right, depth+1);
     }
 
     public static int o_m1(TreeNode root) {
