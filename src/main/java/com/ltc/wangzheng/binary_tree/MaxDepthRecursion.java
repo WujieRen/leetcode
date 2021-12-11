@@ -7,18 +7,7 @@ package com.ltc.wangzheng.binary_tree;
  */
 public class MaxDepthRecursion {
 
-    public int o1(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        int a = o1(root.left);
-        int b = o1(root.right);
-        int c = Math.max(a, b);
-        return c + 1;
-    }
-
-
-    /** ----------------- 写法一 ------------------- */
+    /** ----------------- 写法一，递的时候累计计算高度 ------------------- */
 
     int maxDepth;
 
@@ -33,4 +22,26 @@ public class MaxDepthRecursion {
         if(node.left != null) find(node.left, depth+1);
         if(node.right != null) find(node.right, depth+1);
     }
+
+    /** ----------------- 写法一，递的时候累计计算高度 ------------------- */
+    public int o2(TreeNode root) {
+        return find(root);
+    }
+
+    public int find(TreeNode node) {
+        if(node == null) return 0;
+        return Math.max(find(node.left), find(node.right))+1;
+    }
+
+    //或者：
+    public int o1(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int a = o1(root.left);
+        int b = o1(root.right);
+        int c = Math.max(a, b);
+        return c + 1;
+    }
+
 }
