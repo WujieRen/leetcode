@@ -1,5 +1,8 @@
 package com.ltc;
 
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,10 +30,20 @@ public class Main {
             System.out.println("无!");
         }*/
 
-        String str = "abc.jar.jar";
+        /*String str = "abc.jar.jar";
         int flagIdx = str.lastIndexOf(".");
         System.out.println(str.length() + "---" + flagIdx);
-        System.out.println(str.substring(0, flagIdx) + " " + str.substring(flagIdx));
+        System.out.println(str.substring(0, flagIdx) + " " + str.substring(flagIdx));*/
+
+        LinkedList<Integer> que = new LinkedList<>();
+        que.add(1);
+        que.add(2);
+        que.add(3);
+        que.add(4);
+        que.removeLast();
+        System.out.println(que);
+        que.remove(que.size()-1);
+        System.out.println(que);
 
     }
 
