@@ -76,4 +76,19 @@ public class InorderSuccessor {
         return res;
     }
 
+    /** 争哥的解法 */
+    public TreeNode inorderSuccessor2(TreeNode root, TreeNode p) {
+        TreeNode candidate = null;
+        TreeNode q = root;
+        while(q != null) {
+            if(q.val > p.val) {
+                candidate = q;
+                q = q.left;
+            } else {
+                q = q.right;
+            }
+        }
+        return candidate;
+    }
+
 }

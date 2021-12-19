@@ -23,7 +23,7 @@ public class MaxPathSum {
     }
     public int getHighVal(TreeNode node) {
         if(node == null) return 0;
-        int left = Math.max(0, getHighVal(node.left));
+        int left = Math.max(0, getHighVal(node.left));  //这里和值0取最大是因为值可能是负数
         int right = Math.max(0, getHighVal(node.right));
         maxPathNum = Math.max(maxPathNum, left+right+node.val);
         return Math.max(left, right) + node.val;
