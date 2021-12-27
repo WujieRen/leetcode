@@ -5,9 +5,9 @@ import java.util.*;
 /**
  * @author rwj
  * @create_time 2021/12/23
- * @description
+ * @description https://leetcode-cn.com/problems/combination-sum-ii/
  */
-public class CombinationSumNotRepeat {
+public class CombinationSumHasRepeatUseOnce {
 
     List<List<Integer>> res = new LinkedList<>();
     List<Integer> list = new ArrayList<>();

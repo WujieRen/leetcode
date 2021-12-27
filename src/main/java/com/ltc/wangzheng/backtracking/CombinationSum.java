@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * @author rwj
  * @create_time 2021/12/23
- * @description
+ * @description https://leetcode-cn.com/problems/combination-sum/
  */
 public class CombinationSum {
     /** 这个谁接到排序 + 去重，效率偏低 */
@@ -45,6 +45,7 @@ public class CombinationSum {
             return;
         }
         //这里只需要让每一次都从当前位置开始，不去当前位置之前找就可以避免重复
+        //因为这里要的结果是组合；从当前位置开始如果再去前面的位置找，就会有重复组合出现
         for(int i = start; i < candidates.length; ++i) {
             int curNum = candidates[i];
             if(target - curNum < 0) continue;

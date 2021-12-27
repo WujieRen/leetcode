@@ -5,11 +5,13 @@ import java.util.*;
 /**
  * @author rwj
  * @create_time 2021/12/23
- * @description
+ * @description https://leetcode-cn.com/problems/palindrome-partitioning/
  */
 public class Partition {
     static List<List<String>> res = new ArrayList<>();
     static List<String> list = new ArrayList<>();
+
+    //TODO: 这是我尝试用for循环解决，但是暂时没搞出来；暂时搁置...
     public static List<List<String>> partitionIterate(String s) {
         int n = s.length();
         for (int len = 1; len <= n; ++len) {
@@ -45,6 +47,7 @@ public class Partition {
         return true;
     }
 
+    /**  */
     public static List<List<String>> partition(String s) {
         backTrack(s, 0);
         return res;

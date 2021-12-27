@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author rwj
  * @create_time 2021/12/21
- * @description
+ * @description https://leetcode-cn.com/problems/subsets/
  */
 public class Subsets {
     /** 写法形式① */

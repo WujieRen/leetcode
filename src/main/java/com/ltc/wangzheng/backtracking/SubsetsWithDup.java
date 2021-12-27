@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * @author rwj
  * @create_time 2021/12/21
- * @description
+ * @description https://leetcode-cn.com/problems/subsets-ii/
  */
 public class SubsetsWithDup {
 
@@ -40,7 +40,8 @@ public class SubsetsWithDup {
     Set<List<Integer>> set = new HashSet<>();
     public List<List<Integer>> subsetsWithDup2(int[] nums) {
         set.add(list);
-        Arrays.sort(nums);
+        Arrays.sort(nums);      //必须要排序，HashSet会认为[4,1]和[1,4]是不同的元素，
+                                // 但是如果是排列的话就没问题；组合的话[4,1]和[1,4]被认为是同一个元素
         backTrack2(nums, 0);
         return new ArrayList<>(set);
     }

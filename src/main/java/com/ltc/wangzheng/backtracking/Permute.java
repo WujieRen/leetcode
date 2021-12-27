@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * @author rwj
  * @create_time 2021/12/21
- * @description
+ * @description https://leetcode-cn.com/problems/permutations/
  */
 public class Permute {
     List<List<Integer>> res = new ArrayList<>();

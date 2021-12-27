@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author rwj
  * @create_time 2021/12/22
- * @description
+ * @description https://leetcode-cn.com/problems/eight-queens-lcci/
  */
 public class SolveNQueens {
     List<List<String>> res = new ArrayList<>();

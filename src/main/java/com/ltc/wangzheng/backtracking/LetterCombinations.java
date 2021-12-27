@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @author rwj
  * @create_time 2021/12/21
- * @description
+ * @description https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/
  */
 public class LetterCombinations {
     /*static String[] strs = new String[]{
@@ -32,7 +32,8 @@ public class LetterCombinations {
             res.add(sb.toString());
             return;
         }
-        String letter = strs[Integer.parseInt(digits.substring(level, level + 1))];
+//        String letter = strs[Integer.parseInt(digits.substring(level, level + 1))];
+        String letter = strs[digits.charAt(level)-'0'];
         for (int i = 0; i < letter.length(); ++i) {
             str.add(letter.charAt(i));
             backTrack(digits, level + 1);
